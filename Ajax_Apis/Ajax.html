@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ajax</h1>
+</body>
+    <script>
+        // const res=`{"sa":{"name":"Vinay","age":"22"}}`;  //json data
+        // const data=JSON.parse(res);
+        // console.log(data.sa.age);
+
+
+        //First way to request data from java Script
+        const req=new XMLHttpRequest();
+        req.onload=function()
+        {
+            console.log(this);
+            console.log(JSON.parse(this.responseText).data);
+        }
+        req.onerror=function()
+        {
+            console.log(this);
+        }
+
+        req.open('GET','https://reqres.in/api/users?page=2');
+        req.send();
+
+
+        
+    </script>
+</html>
