@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+        <h1>Comments</h1>
+        <a href="/comments/new">Add New Comment</a>
+        <ul>
+            <% for(let comment of comments){%>
+                <li>
+                    <p><%= comment.id %></p>
+                    <p><%= comment.username %></p>
+                    <p><%= comment.text %></p>
+                    <a href="/comments/<%= comment.id %>">Show</a>
+                    <a href="/comments/<%= comment.id %>/edit">Edit</a>
+                    <form action="/comments/<%= comment.id %>?_method=DELETE" method="POST">
+                        <button>Delete</button>
+                    </form>
+                </li>
+            <%}%>
+        </ul>
+</body>
+</html>

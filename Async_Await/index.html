@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // async keyword wraps the fuction into a promise
+//    async function add(x,y,z)
+//     {
+//         return x+y+z;
+//     }
+
+
+//     add(1,2,3).then((res)=>
+//     {
+//         console.log(res);
+//     }).catch((err)=>
+//     {
+//         console.log(err);
+//     })
+
+
+    // async function fun()
+    // {
+    //     console.log("Starting the fun funtion");
+
+    //     console.log("Starting to fetch data");
+    //     const res=await fetch('https://jsonplaceholder.typicode.com/todos');
+    //     console.log("Starting to parse data");
+    //     const data= await res.json();
+
+    //     console.log('print the data');
+    //     console.log(data);
+    // }
+    // fun();
+
+    function fun2()
+    {
+        
+        return new Promise((res, rej) => {
+            const x = 20;
+            if (x > 10) {
+                return res("Done");
+            }
+            else {
+                return rej("No");
+            }
+        })
+
+    }
+
+console.log(fun2().then((res)=>
+{
+    console.log(res);
+}));
+
+
+let arr=[1,2,3,4,5];
+const cube=num=>num*num*num;
+
+const cubes=arr.map(cube);
+console.log(cubes);
+
+
+const Person={
+    name:"vainy",
+    age:45,
+    abc:function()
+    {
+        return `Hello i am ${this.name} and my age is ${this.age}`;
+    }
+}
+ 
+console.log(Person.name+" "+Person.age);
+console.log(Person.abc());
+
+</script>
+</html>

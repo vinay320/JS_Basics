@@ -1,0 +1,115 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Heading styles */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Link styles */
+a {
+    color: #337ab7;
+    text-decoration: none;
+    width: 100px;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #23527c;
+}
+
+/* Comment list styles */
+ul {
+    list-style-type: none;
+   line-height: 20px;
+}
+
+/* Individual comment styles */
+li {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+   gap: 5px;
+    flex-direction: column;
+}
+
+/* Comment ID styles */
+li p:first-child {
+    font-weight: bold;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+/* Comment username styles */
+li p:nth-child(2) {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Comment text styles */
+li p:nth-child(3) {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Comment action styles */
+li a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: #f7f7f7;
+    color: #337ab7;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease-in-out;
+}
+
+li a:hover {
+    background-color: #ebebeb;
+}
+
+/* Comment delete button styles */
+li button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+li button:hover {
+    background-color: #c9302c;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    li {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
